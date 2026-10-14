@@ -1,3 +1,18 @@
+# Phat Gopher Generator 🦫
+
+> *"Ffs another phat gopher!"*
+
+It all started because a friend sent over a photo of a license plate reading **PHTGPHR** with that exact exclamation. 
+
+That single text triggered an uncontrollable laugh, and instead of just scrolling away, the only logical move was to weaponize the absurdity. This repository houses a monument to that joke: a completely ridiculous webpage built for one sole purpose - generating endless images of a phat gopher.
+
+## What It Does
+* Generates a relentless stream of absolute unit gophers.
+* Serves zero practical utility. 
+* Delivers exactly what the license plate promised.
+
+Use the Text To Image App to create your own version:
+
 # Text To Image App
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/text-to-image-template)
