@@ -9,9 +9,9 @@ export default {
             relation: ["delegate_permission/common.handle_all_urls"],
             target: {
               namespace: "android_app",
-              package_name: "com.example.app",
+              package_name: "com.steve.sealed",
               sha256_cert_fingerprints: [
-                "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+                "0F:C6:EC:99:41:84:B3:32:AD:13:67:9D:84:18:06:28:44:C3:38:3F:D9:82:7C:10:19:B1:21:9D:F7:62:01:D5",
               ],
             },
           },
