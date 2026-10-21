@@ -2,26 +2,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === "/") {
-      return new Response("ok", {
-        status: 200,
-        headers: {
-          "content-type": "text/plain; charset=utf-8",
-          "cache-control": "no-store",
-        },
-      });
-    }
-
-    if (url.pathname === "/s") {
-      return new Response("ok", {
-        status: 200,
-        headers: {
-          "content-type": "text/plain; charset=utf-8",
-          "cache-control": "no-store",
-        },
-      });
-    }
-
     if (url.pathname === "/.well-known/assetlinks.json") {
       return new Response(
         JSON.stringify(
@@ -48,8 +28,19 @@ export default {
       );
     }
 
+    if (url.pathname === "/s") {
+      return new Response("ok", {
+        status: 200,
+        headers: {
+          "content-type": "text/plain; charset=utf-8",
+          "cache-control": "no-store",
+        },
+      });
+    }
+
     const inputs = {
-      prompt: "Photorealistic landscape image ...",
+      prompt:
+        "Photorealistic landscape image of an adorable, always clothed, anthropomorphic pocket gopher holding a Canon camera while standing upright like a wildlife photographer, shot at 85mm, cinematic composition, ultra detailed, crisp focus",
     };
 
     const response = await env.AI.run(
