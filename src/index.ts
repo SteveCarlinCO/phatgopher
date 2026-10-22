@@ -28,7 +28,15 @@ export default {
         }
       );
     }
-
+// Exception for /s route
+    if (url.pathname === "/s") {
+      // Drop your specific logic for the /s endpoint here.
+      // Returning a basic 200 OK for now so it bypasses the 404.
+      return new Response("Endpoint /s reached.", { 
+        status: 200,
+        headers: { "content-type": "text/plain" }
+      });
+    }
     // Root is the default AI image endpoint
     if (url.pathname === "/") {
       try {
