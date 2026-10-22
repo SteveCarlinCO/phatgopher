@@ -34,10 +34,24 @@ export default {
       });
     }
 
+    if (url.pathname === "/favicon.ico") {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          "content-type": "image/x-icon",
+          "cache-control": "no-store",
+        },
+      });
+    }
+
     try {
       const inputs = {
         prompt:
-          "Photorealistic landscape image of an adorable, always clothed, anthropomorphic pocket gopher holding a Canon camera while standing upright like a wildlife photographer, shot at 85mm, cinematic composition, ultra detailed, crisp focus",
+          "Photorealistic landscape image of an adorable, always clothed, anthropomorphic pocket gopher holding a Canon camera while standing upright like a wildlife photographer, shot at 85mm, cinematic composition, natural lighting, highly detailed, realistic fur, professional wildlife photography",
+        num_steps: 50,
+        guidance_scale: 7.5,
+        width: 1024,
+        height: 1024,
       };
 
       const response = await env.AI.run(
