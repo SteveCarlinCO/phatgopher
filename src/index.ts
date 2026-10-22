@@ -55,7 +55,8 @@ export default {
       };
 
       const response = await env.AI.run(
-        "@cf/stabilityai/stable-diffusion-xl-base-2.0",
+        "@cf/stabilityai/stable-diffusion-xl-base-1.0",
+
         inputs
       );
 
