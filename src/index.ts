@@ -1,3 +1,4 @@
+// phatgopher worker - assetlinks serves Sealed + Nilrac Player (2026-11-02)
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
