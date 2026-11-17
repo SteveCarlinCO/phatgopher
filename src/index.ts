@@ -1,4 +1,4 @@
-// phatgopher worker - assetlinks serves Sealed + Nilrac Player (2026-11-02)
+// phatgopher worker - assetlinks serves Sealed only (Nilrac Player removed 2026-11-16)
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -15,16 +15,6 @@ export default {
                 package_name: "com.steve.sealed",
                 sha256_cert_fingerprints: [
                   "0F:C6:EC:99:41:84:B3:32:AD:13:67:9D:84:18:06:28:44:C3:38:3F:D9:82:7C:10:19:B1:21:9D:F7:62:01:D5",
-                ],
-              },
-            },
-            {
-              relation: ["delegate_permission/common.handle_all_urls"],
-              target: {
-                namespace: "android_app",
-                package_name: "com.steve.nilracplayer",
-                sha256_cert_fingerprints: [
-                  "C8:B7:7D:9F:53:8C:D9:46:F3:5E:8E:27:6F:E7:A0:A3:9F:06:5D:6B:DA:7F:DA:CA:FE:77:7E:1A:1B:5F:F5:97",
                 ],
               },
             },
@@ -72,9 +62,7 @@ export default {
         console.error("AI generation failed:", err);
         return new Response("AI generation failed", {
           status: 500,
-          headers: {
-            "content-type": "text/plain; charset=utf-8",
-          },
+          headers: { "content-type": "text/plain; charset=utf-8" },
         });
       }
     }
